@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BabyTrump — $BabyTrump | $2M in 1 Hour</title>
-  <meta name="description" content="Took $BabyTrump to $2M in 1 hour. Proven meme power on Solana — the charge is back and the Final Boss leads again." />
+  <title>MAGA 2028 — $MAGA2028 | 4th Run for President</title>
+  <meta name="description" content="Trump's going to run for a FOURTH time for President. $MAGA2028 is the Solana meme coin riding the biggest political wave in history." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -231,9 +231,97 @@
     html {
       scroll-behavior: smooth;
     }
+
+    /* Custom US eagle cursor + trailing stars */
+    @media (pointer: fine) {
+      body.custom-cursor-active,
+      body.custom-cursor-active a,
+      body.custom-cursor-active button,
+      body.custom-cursor-active [role="button"] {
+        cursor: none !important;
+      }
+    }
+
+    .cursor-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 99999;
+      overflow: hidden;
+    }
+
+    .cursor-trail-star {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      margin-left: -8px;
+      margin-top: -8px;
+      clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%,
+        79% 91%, 50% 70%, 21% 91%, 32% 57%,
+        2% 35%, 39% 35%
+      );
+      will-change: transform;
+      transition: opacity 0.2s ease;
+    }
+
+    .cursor-trail-star.red {
+      background: #B22234;
+      box-shadow: 0 0 10px 2px rgba(178, 34, 52, 0.85);
+    }
+
+    .cursor-trail-star.blue {
+      background: #3C3B6E;
+      box-shadow: 0 0 10px 2px rgba(60, 59, 110, 0.85);
+    }
+
+    .cursor-trail-star.white {
+      background: #ffffff;
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.75);
+    }
+
+    .cursor-eagle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 48px;
+      height: 48px;
+      margin-left: -24px;
+      margin-top: -24px;
+      will-change: transform;
+      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.55));
+      transition: opacity 0.2s ease;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .cursor-eagle img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    body.custom-cursor-hidden .cursor-layer {
+      opacity: 0;
+    }
   </style>
 </head>
 <body class="min-h-screen font-sans text-white antialiased">
+
+  <!-- Custom cursor: cursor.png + red/blue/white star trail -->
+  <div class="cursor-layer" id="cursor-layer" aria-hidden="true">
+    <div class="cursor-trail-star red" id="cursor-star-red"></div>
+    <div class="cursor-trail-star blue" id="cursor-star-blue"></div>
+    <div class="cursor-trail-star white" id="cursor-star-white"></div>
+    <div class="cursor-eagle" id="cursor-eagle">
+      <img src="cursor.png" alt="" width="48" height="48" draggable="false" />
+    </div>
+  </div>
 
   <!-- Background layers -->
   <div class="site-bg" aria-hidden="true"></div>
@@ -246,10 +334,10 @@
     <nav class="sticky top-0 z-50 glass-card border-b border-patriot-gold/20">
       <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href="#" class="flex items-center gap-3 group">
-          <img src="logo.png" alt="BabyTrump Logo" class="h-12 w-12 rounded-full ring-2 ring-patriot-gold/60 group-hover:ring-patriot-gold transition-all animate-float" />
+          <img src="logo.png" alt="MAGA 2028 Logo" class="h-12 w-12 rounded-full ring-2 ring-patriot-gold/60 group-hover:ring-patriot-gold transition-all animate-float" />
           <div>
-            <span class="font-display text-2xl tracking-wider gold-text">BabyTrump</span>
-            <span class="block text-xs text-patriot-gold/80 font-semibold tracking-widest">$BabyTrump</span>
+            <span class="font-display text-2xl tracking-wider gold-text">MAGA 2028</span>
+            <span class="block text-xs text-patriot-gold/80 font-semibold tracking-widest">$MAGA2028</span>
           </div>
         </a>
         <div class="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wide">
@@ -274,59 +362,59 @@
         <div class="text-center mb-6">
           <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-sm font-semibold text-patriot-gold mb-4">
             <span class="star-decoration">★</span>
-            <span>PROVEN · $2M IN 1 HOUR · SOLANA</span>
+            <span>4TH RUN · MAKE AMERICA GREAT AGAIN · SOLANA</span>
             <span class="star-decoration">★</span>
           </div>
 
-          <div class="glass-card rounded-2xl px-6 py-5 max-w-2xl mx-auto mb-6 border-patriot-gold/40">
-            <p class="font-display text-3xl md:text-5xl tracking-wide leading-tight">
-              <span class="gold-text">TOOK $BabyTrump</span>
-              <span class="text-white"> TO </span>
-              <span class="text-patriot-red font-display">$2M</span>
-              <span class="text-white"> IN </span>
-              <span class="gold-text">1 HOUR</span>
+          <div class="glass-card rounded-2xl px-6 py-5 max-w-3xl mx-auto mb-6 border-patriot-gold/40">
+            <p class="font-display text-2xl md:text-4xl tracking-wide leading-tight">
+              <span class="text-white">TRUMP'S GOING TO RUN FOR A </span>
+              <span class="gold-text">FOURTH</span>
+              <span class="text-white"> TIME FOR </span>
+              <span class="text-patriot-red font-display">PRESIDENT</span>
             </p>
             <p class="text-gray-300 text-sm md:text-base mt-3 font-semibold tracking-wide uppercase">
-              Same energy. Same legion. The charge starts again.
+              The biggest political moment in history — and $MAGA2028 is on the front line.
             </p>
           </div>
         </div>
 
         <div class="relative mx-auto max-w-4xl mb-10">
           <div class="absolute inset-0 bg-patriot-gold/20 blur-3xl rounded-full scale-75 animate-pulse-gold"></div>
-          <img src="banner.png" alt="BabyTrump Banner" class="relative w-full rounded-2xl shadow-2xl ring-2 ring-patriot-gold/40 hover:ring-patriot-gold/70 transition-all" />
+          <img src="banner.png" alt="MAGA 2028 Banner" class="relative w-full rounded-2xl shadow-2xl ring-2 ring-patriot-gold/40 hover:ring-patriot-gold/70 transition-all" />
         </div>
 
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="font-display text-5xl md:text-7xl tracking-wider mb-2">
-            <span class="gold-text">$2M</span>
-            <span class="text-white"> IN </span>
-            <span class="gold-text">1 HOUR</span>
+            <span class="gold-text">FOURTH</span>
+            <span class="text-white"> TIME'S</span>
+            <span class="gold-text"> THE CHARM</span>
           </h1>
-          <p class="text-2xl md:text-3xl font-display tracking-widest text-patriot-gold mb-6">$BabyTrump · Final Boss</p>
+          <p class="text-2xl md:text-3xl font-display tracking-widest text-patriot-gold mb-6">$MAGA2028 · Final Boss</p>
           <p class="text-lg md:text-xl text-gray-200 leading-relaxed mb-6 px-4">
-            We already did it once — <span class="text-patriot-gold font-semibold">$BabyTrump hit $2M market cap in just 1 hour</span>.
-            That wasn't luck. That was <span class="text-patriot-red font-semibold">viral meme power</span>,
-            <span class="text-white font-semibold">unstoppable community momentum</span>, and a charge that never slowed down.
+            <span class="text-patriot-gold font-semibold">Trump's going to run for a FOURTH time for President</span> —
+            and the meme world is ready. $MAGA2028 captures that
+            <span class="text-patriot-red font-semibold">patriotic fire</span>,
+            <span class="text-white font-semibold">viral political energy</span>, and unstoppable MAGA momentum on Solana.
           </p>
           <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-8 px-4">
-            The Final Boss is back on Solana. <span class="text-patriot-gold font-semibold">$BabyTrump</span> proved the playbook works —
-            now the legion marches again. Don't miss round two.
+            First term. Second term. Third run. Now the <span class="text-patriot-gold font-semibold">FOURTH</span> —
+            history in the making and $MAGA2028 is the coin of the movement. Don't watch from the sidelines.
           </p>
 
-          <!-- Track record stats -->
+          <!-- Fourth run stats -->
           <div class="grid grid-cols-3 gap-3 max-w-lg mx-auto mb-8 px-4">
             <div class="glass-card rounded-xl py-4 px-2">
-              <p class="font-display text-2xl md:text-3xl gold-text">$2M</p>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Peak MC</p>
+              <p class="font-display text-2xl md:text-3xl gold-text">4TH</p>
+              <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Presidential Run</p>
             </div>
             <div class="glass-card rounded-xl py-4 px-2">
-              <p class="font-display text-2xl md:text-3xl text-patriot-red">1 HR</p>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">To Hit It</p>
+              <p class="font-display text-2xl md:text-3xl text-patriot-red">TRUMP</p>
+              <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Final Boss</p>
             </div>
             <div class="glass-card rounded-xl py-4 px-2">
-              <p class="font-display text-2xl md:text-3xl text-white">$BabyTrump</p>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Proven</p>
+              <p class="font-display text-2xl md:text-3xl text-white">$MAGA2028</p>
+              <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">The Coin</p>
             </div>
           </div>
 
@@ -379,31 +467,31 @@
         <div class="text-center mb-14">
           <h2 class="font-display text-5xl md:text-6xl tracking-wider mb-3">
             <span class="star-decoration">★</span>
-            <span class="gold-text"> PROVEN POWER </span>
+            <span class="gold-text"> THE 4TH RUN </span>
             <span class="star-decoration">★</span>
           </h2>
           <p class="text-gray-300 text-lg max-w-2xl mx-auto mt-4">
-            Took <span class="text-patriot-gold font-semibold">$BabyTrump to $2M in 1 hour</span> — and the community never forgot.
-            Same dev energy, same meme warfare, same Final Boss charge on Solana.
+            <span class="text-patriot-gold font-semibold">Trump's going to run for a FOURTH time for President</span> —
+            and $MAGA2028 is the meme coin built for this moment. Patriotic energy meets Solana speed.
           </p>
           <div class="w-32 h-1 bg-gradient-to-r from-patriot-red via-patriot-gold to-patriot-blue mx-auto rounded-full mt-4"></div>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6">
           <div class="glass-card rounded-2xl p-8 text-center hover:border-patriot-gold/50 transition-all hover:-translate-y-1">
-            <div class="text-5xl mb-4">📈</div>
-            <h3 class="font-display text-2xl text-patriot-gold tracking-wide mb-3">$2M IN 1 HOUR</h3>
-            <p class="text-gray-300 leading-relaxed">$BabyTrump didn't crawl — it exploded. Zero to $2M market cap in a single hour. That's the track record. That's the proof.</p>
+            <div class="text-5xl mb-4">🇺🇸</div>
+            <h3 class="font-display text-2xl text-patriot-gold tracking-wide mb-3">FOURTH TIME FOR PRESIDENT</h3>
+            <p class="text-gray-300 leading-relaxed">Trump's going to run for a FOURTH time for President — unprecedented, historic, and the biggest political narrative on the planet. $MAGA2028 rides the wave.</p>
           </div>
           <div class="glass-card rounded-2xl p-8 text-center hover:border-patriot-gold/50 transition-all hover:-translate-y-1">
             <div class="text-5xl mb-4">⚡</div>
-            <h3 class="font-display text-2xl text-patriot-gold tracking-wide mb-3">VIRAL MEME POWER</h3>
-            <p class="text-gray-300 leading-relaxed">BabyTrump Trump brings ultimate meme power to Solana — the same viral energy that took $BabyTrump to $2M is leading the charge again.</p>
+            <h3 class="font-display text-2xl text-patriot-gold tracking-wide mb-3">MAGA MEME POWER</h3>
+            <p class="text-gray-300 leading-relaxed">MAGA 2028 brings ultimate meme power to Solana — the same patriotic viral energy fueling the 4th run, now tokenized and community-driven.</p>
           </div>
           <div class="glass-card rounded-2xl p-8 text-center hover:border-patriot-gold/50 transition-all hover:-translate-y-1">
             <div class="text-5xl mb-4">🏛️</div>
-            <h3 class="font-display text-2xl text-patriot-gold tracking-wide mb-3">ROUND TWO CHARGE</h3>
-            <p class="text-gray-300 leading-relaxed">The legion that hit $2M in 60 minutes is back. Stack $BabyTrump early — history already wrote the first chapter.</p>
+            <h3 class="font-display text-2xl text-patriot-gold tracking-wide mb-3">JOIN THE MOVEMENT</h3>
+            <p class="text-gray-300 leading-relaxed">The 4th run is coming. Stack $MAGA2028 and stand with the legion — from the rally to the blockchain, the charge never stops.</p>
           </div>
         </div>
       </div>
@@ -415,9 +503,9 @@
       <div class="relative max-w-6xl mx-auto">
         <div class="text-center mb-14">
           <h2 class="font-display text-5xl md:text-6xl tracking-wider mb-3">
-            HOW TO BUY <span class="gold-text">$BabyTrump</span>
+            HOW TO BUY <span class="gold-text">$MAGA2028</span>
           </h2>
-          <p class="text-gray-300 text-lg">They took $BabyTrump to $2M in 1 hour — get in before the next charge. 4 easy steps using SOL.</p>
+          <p class="text-gray-300 text-lg">Trump's 4th run is heating up — grab $MAGA2028 before the wave hits. 4 easy steps using SOL.</p>
           <div class="w-32 h-1 bg-gradient-to-r from-patriot-red via-patriot-gold to-patriot-blue mx-auto rounded-full mt-4"></div>
         </div>
 
@@ -480,11 +568,11 @@
             </div>
             <div>
               <div class="flex items-center gap-3 mb-3">
-                <img src="logo.png" alt="BabyTrump" class="h-10 w-10 rounded-full ring-1 ring-patriot-gold/50" />
-                <h3 class="font-display text-2xl tracking-wide text-patriot-gold">SWAP SOL → $BabyTrump</h3>
+                <img src="logo.png" alt="MAGA 2028" class="h-10 w-10 rounded-full ring-1 ring-patriot-gold/50" />
+                <h3 class="font-display text-2xl tracking-wide text-patriot-gold">SWAP SOL → $MAGA2028</h3>
               </div>
               <p class="text-gray-300 leading-relaxed">
-                Paste the <strong class="text-white">$BabyTrump contract address</strong> (use Copy CA above), select SOL as input, set your amount, and confirm the swap in Phantom. $2M in 1 hour happened once — don't sit this one out. ⚔️
+                Paste the <strong class="text-white">$MAGA2028 contract address</strong> (use Copy CA above), select SOL as input, set your amount, and confirm the swap in Phantom. Trump's 4th run for President is coming — get your bags now. 🇺🇸
               </p>
             </div>
           </div>
@@ -498,7 +586,7 @@
             rel="noopener noreferrer"
             class="btn-gold inline-block px-12 py-4 rounded-xl font-display text-2xl tracking-wider text-patriot-navy"
           >
-            ★ BUY $BabyTrump NOW ★
+            ★ BUY $MAGA2028 NOW ★
           </a>
         </div>
       </div>
@@ -511,7 +599,7 @@
           <h2 class="font-display text-5xl md:text-6xl tracking-wider mb-3">
             LIVE <span class="gold-text">CHART</span>
           </h2>
-          <p class="text-gray-300">Watch $BabyTrump climb — the coin that hit $2M in 1 hour, live on chart</p>
+          <p class="text-gray-300">Track $MAGA2028 as Trump's 4th presidential run fuels the chart</p>
           <div class="w-32 h-1 bg-gradient-to-r from-patriot-red via-patriot-gold to-patriot-blue mx-auto rounded-full mt-4"></div>
         </div>
 
@@ -543,14 +631,14 @@
     <footer class="border-t border-patriot-gold/20 py-10 px-4">
       <div class="max-w-6xl mx-auto text-center">
         <div class="flex items-center justify-center gap-3 mb-4">
-          <img src="logo.png" alt="BabyTrump" class="h-14 w-14 rounded-full ring-2 ring-patriot-gold/50" />
+          <img src="logo.png" alt="MAGA 2028" class="h-14 w-14 rounded-full ring-2 ring-patriot-gold/50" />
           <div class="text-left">
-            <p class="font-display text-3xl tracking-wider gold-text">BabyTrump</p>
-            <p class="text-patriot-gold text-sm font-semibold tracking-widest">$BabyTrump</p>
+            <p class="font-display text-3xl tracking-wider gold-text">MAGA 2028</p>
+            <p class="text-patriot-gold text-sm font-semibold tracking-widest">$MAGA2028</p>
           </div>
         </div>
         <p class="text-gray-400 text-sm mb-6 max-w-lg mx-auto">
-          Took $BabyTrump to $2M in 1 hour. Proven meme power on Solana — community-driven, not financial advice. DYOR. ⚔️
+          Trump's going to run for a FOURTH time for President — $MAGA2028 is the Solana meme coin of the movement. Not financial advice. DYOR. 🇺🇸
         </p>
         <div class="flex items-center justify-center gap-4 mb-6">
           <a href="https://t.me/MAGA2028_sol" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform">
@@ -561,7 +649,7 @@
           </a>
         </div>
         <div class="stripes-accent w-48 mx-auto mb-4 rounded-full"></div>
-        <p class="text-gray-500 text-xs">© 2026 BabyTrump · Took $BabyTrump to $2M in 1 hour. ★</p>
+        <p class="text-gray-500 text-xs">© 2026 MAGA 2028 · Trump's 4th Run for President. ★</p>
       </div>
     </footer>
 
@@ -569,6 +657,73 @@
 
   <script>
     const CONTRACT_ADDRESS = 'TBA';
+
+    // Custom cursor.png with red, blue & white trailing stars
+    (function initCustomCursor() {
+      if (!window.matchMedia('(pointer: fine)').matches) return;
+
+      document.body.classList.add('custom-cursor-active');
+
+      const eagle = document.getElementById('cursor-eagle');
+      const layer = document.getElementById('cursor-layer');
+      const stars = [
+        { el: document.getElementById('cursor-star-red'), x: 0, y: 0, lag: 0.14 },
+        { el: document.getElementById('cursor-star-blue'), x: 0, y: 0, lag: 0.1 },
+        { el: document.getElementById('cursor-star-white'), x: 0, y: 0, lag: 0.07 },
+      ];
+
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let eagleX = mouseX;
+      let eagleY = mouseY;
+      let visible = false;
+
+      stars.forEach((s) => { s.x = mouseX; s.y = mouseY; });
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (!visible) {
+          visible = true;
+          document.body.classList.remove('custom-cursor-hidden');
+        }
+      });
+
+      document.addEventListener('mouseleave', () => {
+        visible = false;
+        document.body.classList.add('custom-cursor-hidden');
+      });
+
+      document.addEventListener('mouseenter', () => {
+        visible = true;
+        document.body.classList.remove('custom-cursor-hidden');
+      });
+
+      function setPos(el, x, y) {
+        el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      }
+
+      function animate() {
+        eagleX += (mouseX - eagleX) * 0.28;
+        eagleY += (mouseY - eagleY) * 0.28;
+        setPos(eagle, eagleX, eagleY);
+
+        let targetX = eagleX;
+        let targetY = eagleY;
+        stars.forEach((star) => {
+          star.x += (targetX - star.x) * star.lag;
+          star.y += (targetY - star.y) * star.lag;
+          setPos(star.el, star.x, star.y);
+          targetX = star.x;
+          targetY = star.y;
+        });
+
+        requestAnimationFrame(animate);
+      }
+
+      document.body.classList.add('custom-cursor-hidden');
+      animate();
+    })();
 
     // Generate shining white & red stars across the background
     (function initStars() {
