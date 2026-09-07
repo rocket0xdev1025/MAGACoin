@@ -3,811 +3,634 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dunaldu Tremp — Tariff King · Hormuz Boss | DUNALDU</title>
-  <meta name="description" content="50% tariffs on Canada. Trade war with China. Stole the Strait of Hormuz. DUNALDU is the Solana meme coin of the tariff king." />
-  <meta property="og:title" content="Dunaldu Tremp — Tariff King · Hormuz Boss" />
-  <meta property="og:description" content="Canada 50%. China tariffs. Stole Hormuz. The memes. The coin. DUNALDU." />
-  <meta property="og:image" content="logo.jpg" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Dunaldu Memes — unofficial dump</title>
+  <meta name="description" content="Unofficial Dunaldu Tremp meme dump. 50% on Canada. Tariffs on China. Stole Hormuz. Not an official website." />
   <link rel="icon" href="logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['"Bebas Neue"', 'sans-serif'],
-            sans: ['Inter', 'sans-serif'],
-          },
-          colors: {
-            patriot: {
-              red: '#B22234',
-              blue: '#3C3B6E',
-              navy: '#0A1628',
-              gold: '#FFD700',
-              goldDark: '#C9A227',
-            },
-          },
-          animation: {
-            'pulse-gold': 'pulseGold 2s ease-in-out infinite',
-            'float': 'float 4s ease-in-out infinite',
-            'shimmer': 'shimmer 3s linear infinite',
-          },
-          keyframes: {
-            pulseGold: {
-              '0%, 100%': { boxShadow: '0 0 20px rgba(255,215,0,0.4)' },
-              '50%': { boxShadow: '0 0 40px rgba(255,215,0,0.8)' },
-            },
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-10px)' },
-            },
-            shimmer: {
-              '0%': { backgroundPosition: '-200% center' },
-              '100%': { backgroundPosition: '200% center' },
-            },
-          },
-        },
-      },
-    };
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet" />
   <style>
-    .site-bg {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      background: url('bg.png') center center / cover no-repeat fixed;
+    :root {
+      --paper: #F4EBD8;
+      --paper-2: #FFF8EE;
+      --ink: #1A1A1A;
+      --hat: #C51F2E;
+      --suit: #1B365D;
+      --tie: #1E56A0;
+      --blonde: #F0C14A;
+      --line: 5px;
     }
 
-    .site-bg-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(10, 22, 40, 0.62) 0%,
-        rgba(10, 22, 40, 0.42) 45%,
-        rgba(10, 22, 40, 0.7) 100%
-      );
-      pointer-events: none;
-    }
-
-    .stars-field {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
-
-    .shine-star {
-      position: absolute;
-      clip-path: polygon(
-        50% 0%, 61% 35%, 98% 35%, 68% 57%,
-        79% 91%, 50% 70%, 21% 91%, 32% 57%,
-        2% 35%, 39% 35%
-      );
-    }
-
-    .shine-star-white {
-      background: #ffffff;
-      box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.9), 0 0 20px 4px rgba(255, 255, 255, 0.4);
-      animation: starShineWhite 3s ease-in-out infinite;
-    }
-
-    .shine-star-red {
-      background: #B22234;
-      box-shadow: 0 0 10px 3px rgba(178, 34, 52, 0.9), 0 0 24px 6px rgba(178, 34, 52, 0.45);
-      animation: starShineRed 3.5s ease-in-out infinite;
-    }
-
-    @keyframes starShineWhite {
-      0%, 100% {
-        opacity: 0.12;
-        transform: scale(0.65) rotate(0deg);
-        filter: brightness(1) drop-shadow(0 0 2px rgba(255,255,255,0.3));
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.3) rotate(18deg);
-        filter: brightness(3) drop-shadow(0 0 12px rgba(255,255,255,1));
-      }
-    }
-
-    @keyframes starShineRed {
-      0%, 100% {
-        opacity: 0.15;
-        transform: scale(0.7) rotate(0deg);
-        filter: brightness(1) drop-shadow(0 0 2px rgba(178,34,52,0.3));
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.35) rotate(-15deg);
-        filter: brightness(2.2) drop-shadow(0 0 14px rgba(178,34,52,1));
-      }
-    }
-
-    .content-layer { position: relative; z-index: 1; }
-
-    .gold-text {
-      background: linear-gradient(135deg, #FFD700 0%, #FFF8DC 40%, #FFD700 60%, #C9A227 100%);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: shimmer 3s linear infinite;
-    }
-
-    .btn-gold {
-      background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
-      background-size: 200% auto;
-      transition: all 0.3s ease;
-    }
-
-    .btn-gold:hover {
-      background-position: right center;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(255,215,0,0.5);
-    }
-
-    .btn-patriot {
-      background: linear-gradient(135deg, #B22234 0%, #8B0000 100%);
-      transition: all 0.3s ease;
-    }
-
-    .btn-patriot:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(178,34,52,0.5);
-    }
-
-    .btn-blue {
-      background: linear-gradient(135deg, #3C3B6E 0%, #1a1a4e 100%);
-      transition: all 0.3s ease;
-    }
-
-    .btn-blue:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(60,59,110,0.5);
-    }
-
-    .glass-card {
-      background: rgba(10, 22, 40, 0.75);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 215, 0, 0.25);
-    }
-
-    .step-number {
-      background: linear-gradient(135deg, #FFD700, #B22234);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .star-decoration {
-      color: #FFD700;
-      text-shadow: 0 0 10px rgba(255,215,0,0.6);
-    }
-
-    .copy-toast {
-      opacity: 0;
-      transform: translateY(8px);
-      transition: all 0.3s ease;
-    }
-
-    .copy-toast.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .social-x { background: #0d0d0d; }
-
-    .stripes-accent {
-      background: repeating-linear-gradient(
-        90deg,
-        #B22234 0px,
-        #B22234 8px,
-        #FFFFFF 8px,
-        #FFFFFF 16px
-      );
-      height: 4px;
-    }
-
+    * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
 
-    /* Ticker */
-    .ticker {
-      overflow: hidden;
-      background: linear-gradient(90deg, #8B0000, #B22234, #8B0000);
-      border-top: 1px solid rgba(255,215,0,0.35);
-      border-bottom: 1px solid rgba(255,215,0,0.35);
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Comic Neue", "Comic Sans MS", cursive, sans-serif;
+      background-color: var(--paper);
+      background-image:
+        radial-gradient(rgba(26,26,26,0.05) 1px, transparent 1px),
+        linear-gradient(180deg, #F7F0E3 0%, #F4EBD8 40%, #EFE3CC 100%);
+      background-size: 14px 14px, 100% 100%;
     }
 
-    .ticker-track {
-      display: flex;
-      width: max-content;
-      animation: tickerScroll 38s linear infinite;
+    img { max-width: 100%; display: block; }
+
+    a { color: var(--suit); }
+    a:hover { color: var(--hat); }
+
+    .wrap {
+      width: min(1120px, calc(100% - 28px));
+      margin: 0 auto;
     }
 
-    .ticker-track:hover { animation-play-state: paused; }
+    /* ink panel — same thick outline as the character art */
+    .ink {
+      background: var(--paper-2);
+      border: var(--line) solid var(--ink);
+      border-radius: 10px;
+      box-shadow: 7px 7px 0 var(--ink);
+    }
 
-    .ticker-item {
+    .btn {
+      display: inline-block;
+      border: 4px solid var(--ink);
+      border-radius: 10px;
+      padding: 0.7rem 1.15rem;
+      font-family: Bangers, cursive;
+      letter-spacing: 0.06em;
+      font-size: 1.35rem;
+      text-decoration: none;
+      color: #fff;
+      box-shadow: 4px 4px 0 var(--ink);
+      transform: rotate(-1deg);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover { transform: rotate(0deg) translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+    .btn-hat { background: var(--hat); color: #fff; }
+    .btn-suit { background: var(--suit); color: #fff; }
+    .btn-blonde { background: var(--blonde); color: var(--ink); }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 8px;
+      z-index: 40;
+      margin: 10px auto 0;
+      width: min(1120px, calc(100% - 28px));
       display: flex;
       align-items: center;
-      gap: 1.25rem;
-      padding: 0.55rem 0;
-      font-family: 'Bebas Neue', sans-serif;
-      letter-spacing: 0.18em;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 12px;
+      background: #fff;
+      border: var(--line) solid var(--ink);
+      border-radius: 14px;
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .brand img {
+      width: 54px;
+      height: 54px;
+      object-fit: cover;
+      border: 4px solid var(--ink);
+      border-radius: 50%;
+      background: #fff;
+    }
+    .brand-name {
+      font-family: Bangers, cursive;
+      font-size: 1.7rem;
+      letter-spacing: 0.04em;
+      line-height: 0.9;
+      color: var(--hat);
+    }
+    .brand-sub {
+      font-family: "Permanent Marker", cursive;
+      font-size: 0.72rem;
+      color: var(--suit);
+      transform: rotate(-2deg);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: Bangers, cursive;
+      letter-spacing: 0.08em;
+      font-size: 1.15rem;
+    }
+    .nav-links a { color: var(--ink); text-decoration: none; }
+    .nav-links a:hover { color: var(--hat); }
+    .nav-social { display: flex; gap: 8px; }
+    .nav-social img {
+      width: 34px;
+      height: 34px;
+      border: 3px solid var(--ink);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    /* HERO */
+    header { padding: 28px 0 10px; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .hero-mascot {
+      position: relative;
+    }
+    .hero-mascot img.logo {
+      width: 100%;
+      background: #fff;
+      border: var(--line) solid var(--ink);
+      border-radius: 18px;
+      box-shadow: 8px 8px 0 var(--ink);
+      transform: rotate(-2.5deg);
+    }
+    .stamp {
+      position: absolute;
+      right: -18px;
+      bottom: 18px;
+      border: 4px solid var(--hat);
+      color: var(--hat);
+      font-family: Bangers, cursive;
+      letter-spacing: 0.12em;
+      font-size: 1.15rem;
+      padding: 6px 10px;
+      transform: rotate(-18deg);
+      background: rgba(255,248,238,0.92);
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+
+    .speech {
+      position: relative;
+      background: #fff;
+      border: var(--line) solid var(--ink);
+      border-radius: 22px;
+      padding: 18px 22px 16px;
+      box-shadow: 7px 7px 0 var(--ink);
+    }
+    .speech:after {
+      content: "";
+      position: absolute;
+      left: -22px;
+      top: 70px;
+      width: 28px;
+      height: 22px;
+      background: #fff;
+      border-left: var(--line) solid var(--ink);
+      border-bottom: var(--line) solid var(--ink);
+      transform: skewX(-32deg);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-family: Bangers, cursive;
+      font-size: clamp(2.6rem, 7vw, 5.2rem);
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+    }
+    h1 span { color: var(--hat); }
+
+    .marker {
+      font-family: "Permanent Marker", cursive;
+      font-size: 1.15rem;
+      color: var(--suit);
+      margin: 0 0 10px;
+      transform: rotate(-1deg);
+    }
+
+    .blurb {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 0 0 16px;
+      max-width: 42ch;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .strip {
+      margin-top: 22px;
+      overflow: hidden;
+    }
+    .strip img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+
+    /* COMIC ROW */
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 34px 0 14px;
+    }
+    h2 {
+      margin: 0;
+      font-family: Bangers, cursive;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      letter-spacing: 0.03em;
+    }
+    h2 em { color: var(--hat); font-style: normal; }
+    .scribble {
+      font-family: "Permanent Marker", cursive;
+      color: var(--suit);
+      font-size: 0.95rem;
+    }
+
+    .comic-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .comic-cell {
+      background: #fff;
+      border: var(--line) solid var(--ink);
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .comic-cell img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+    .comic-cell figcaption {
+      border-top: 4px solid var(--ink);
+      padding: 6px 8px;
+      font-family: Bangers, cursive;
+      letter-spacing: 0.04em;
       font-size: 1.05rem;
-      white-space: nowrap;
+      background: var(--blonde);
+    }
+    .comic-cell:nth-child(2) figcaption { background: var(--hat); color: #fff; }
+    .comic-cell:nth-child(3) figcaption { background: var(--suit); color: #fff; }
+    .comic-cell:nth-child(4) figcaption { background: #fff; }
+
+    /* FILTERS + WALL */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 16px;
+    }
+    .chip {
+      font-family: Bangers, cursive;
+      letter-spacing: 0.08em;
+      font-size: 1.05rem;
+      border: 3px solid var(--ink);
+      background: #fff;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+    .chip.active {
+      background: var(--hat);
       color: #fff;
     }
 
-    @keyframes tickerScroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    .wall {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px 16px;
+      padding-bottom: 10px;
     }
 
-    /* Meme grid */
-    .meme-card {
+    .sticker {
       position: relative;
-      overflow: hidden;
-      border-radius: 1rem;
-      border: 2px solid rgba(255, 215, 0, 0.22);
-      background: rgba(10, 22, 40, 0.6);
+      background: #fff;
+      border: var(--line) solid var(--ink);
+      box-shadow: 6px 6px 0 var(--ink);
       cursor: pointer;
-      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      transform: rotate(-1.2deg);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
-
-    .meme-card:hover,
-    .meme-card:focus-visible {
-      transform: translateY(-6px) scale(1.015);
-      border-color: #FFD700;
-      box-shadow: 0 18px 40px rgba(255, 215, 0, 0.22);
+    .sticker:nth-child(3n) { transform: rotate(1.4deg); }
+    .sticker:nth-child(3n+1) { transform: rotate(-2deg); }
+    .sticker:nth-child(5n) { transform: rotate(0.6deg); }
+    .sticker:hover,
+    .sticker:focus-visible {
+      transform: rotate(0deg) scale(1.04);
+      box-shadow: 10px 10px 0 var(--ink);
+      z-index: 2;
       outline: none;
     }
-
-    .meme-card img {
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      display: block;
-    }
-
-    .meme-card .meme-overlay {
+    .sticker img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+    .tape {
       position: absolute;
-      inset: auto 0 0 0;
-      padding: 2.2rem 0.75rem 0.7rem;
-      background: linear-gradient(transparent, rgba(10,22,40,0.92));
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
+      top: -10px;
+      left: 50%;
+      width: 64px;
+      height: 18px;
+      margin-left: -32px;
+      background: rgba(240, 193, 74, 0.55);
+      border: 2px solid rgba(26,26,26,0.25);
+      transform: rotate(-3deg);
+    }
+    .sticker:nth-child(even) .tape { background: rgba(197,31,46,0.28); transform: rotate(4deg); }
+    .sticker .save {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      background: var(--blonde);
+      border: 3px solid var(--ink);
+      color: var(--ink);
+      font-family: Bangers, cursive;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      text-decoration: none;
       opacity: 0;
-      transition: opacity 0.2s ease;
+    }
+    .sticker:hover .save,
+    .sticker:focus-visible .save { opacity: 1; }
+
+    /* NOTE / BUY */
+    .notes {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      margin: 40px 0 28px;
+    }
+    .note {
+      background: #FFF4B8;
+      border: var(--line) solid var(--ink);
+      box-shadow: 7px 7px 0 var(--ink);
+      padding: 18px 18px 16px;
+      transform: rotate(-0.8deg);
+    }
+    .note h3 {
+      margin: 0 0 8px;
+      font-family: "Permanent Marker", cursive;
+      font-size: 1.4rem;
+    }
+    .ca {
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: 0.86rem;
+      word-break: break-all;
+      background: #fff;
+      border: 3px dashed var(--ink);
+      padding: 8px;
+      margin: 8px 0 12px;
+    }
+    .copied {
+      display: none;
+      font-family: Bangers, cursive;
+      color: var(--hat);
+      font-size: 1.3rem;
+    }
+    .copied.show { display: inline; }
+
+    .scrap {
+      background: #fff;
+      border: var(--line) solid var(--ink);
+      box-shadow: 7px 7px 0 var(--ink);
+      padding: 16px;
+      transform: rotate(1.4deg);
+    }
+    .scrap h3 {
+      margin: 0 0 8px;
+      font-family: Bangers, cursive;
+      font-size: 1.8rem;
+    }
+    .steps { margin: 0; padding-left: 1.1rem; font-weight: 700; }
+    .steps li { margin: 6px 0; }
+
+    /* FOOTER */
+    footer {
+      border-top: var(--line) solid var(--ink);
+      margin-top: 10px;
+      padding: 22px 0 36px;
+      text-align: center;
+    }
+    footer .logo-mini {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      border: 4px solid var(--ink);
+      border-radius: 50%;
+      margin: 0 auto 8px;
+      background: #fff;
+    }
+    .fineprint {
+      font-family: "Permanent Marker", cursive;
+      color: var(--hat);
+      font-size: 1rem;
     }
 
-    .meme-card:hover .meme-overlay,
-    .meme-card:focus-visible .meme-overlay { opacity: 1; }
-
-    .filter-btn {
-      border: 1px solid rgba(255,215,0,0.3);
-      background: rgba(10,22,40,0.7);
-      color: #fff;
-      font-family: 'Bebas Neue', sans-serif;
-      letter-spacing: 0.12em;
-      padding: 0.45rem 1rem;
-      border-radius: 999px;
-      font-size: 1.05rem;
-      transition: all 0.2s ease;
-    }
-
-    .filter-btn:hover { border-color: #FFD700; color: #FFD700; }
-    .filter-btn.active {
-      background: linear-gradient(135deg, #FFD700, #FFA500);
-      color: #0A1628;
-      border-color: #FFD700;
-    }
-
-    /* Lightbox */
-    .lightbox {
+    /* LIGHTBOX */
+    .lb {
       position: fixed;
       inset: 0;
+      background: rgba(244, 235, 216, 0.94);
       z-index: 80;
-      background: rgba(5, 10, 20, 0.92);
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 1.5rem;
+      padding: 20px;
     }
-
-    .lightbox.open { display: flex; }
-
-    .lightbox img {
-      max-width: min(92vw, 720px);
-      max-height: 78vh;
-      border-radius: 1rem;
-      border: 2px solid rgba(255,215,0,0.45);
-      box-shadow: 0 20px 80px rgba(0,0,0,0.6);
+    .lb.open { display: flex; }
+    .lb-frame {
+      background: #fff;
+      border: 6px solid var(--ink);
+      box-shadow: 12px 12px 0 var(--ink);
+      max-width: min(92vw, 680px);
     }
-
-    .lightbox-nav {
+    .lb-frame img { width: 100%; max-height: 72vh; object-fit: contain; background: #fff; }
+    .lb-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      border-top: 4px solid var(--ink);
+      padding: 8px 10px;
+      background: var(--blonde);
+      font-family: Bangers, cursive;
+      letter-spacing: 0.05em;
+      font-size: 1.2rem;
+    }
+    .lb-nav {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       width: 48px;
       height: 48px;
-      border-radius: 999px;
-      background: rgba(10,22,40,0.85);
-      border: 1px solid rgba(255,215,0,0.4);
-      color: #FFD700;
-      font-size: 1.6rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      border: 4px solid var(--ink);
+      background: #fff;
+      font-size: 1.8rem;
+      box-shadow: 4px 4px 0 var(--ink);
+      cursor: pointer;
     }
-
-    .lightbox-nav.prev { left: 1rem; }
-    .lightbox-nav.next { right: 1rem; }
-    .lightbox-nav:hover { background: #B22234; color: #fff; }
+    .lb-nav.prev { left: 16px; }
+    .lb-nav.next { right: 16px; }
 
     @media (pointer: fine) {
       body.custom-cursor-active,
       body.custom-cursor-active a,
       body.custom-cursor-active button,
-      body.custom-cursor-active [role="button"] {
-        cursor: none !important;
-      }
+      body.custom-cursor-active [role="button"] { cursor: none !important; }
     }
-
     .cursor-layer {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 99999;
-      overflow: hidden;
+      position: fixed; inset: 0; pointer-events: none; z-index: 99999;
     }
-
-    .cursor-trail-star {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 16px;
-      height: 16px;
-      margin-left: -8px;
-      margin-top: -8px;
-      clip-path: polygon(
-        50% 0%, 61% 35%, 98% 35%, 68% 57%,
-        79% 91%, 50% 70%, 21% 91%, 32% 57%,
-        2% 35%, 39% 35%
-      );
-      will-change: transform;
-      transition: opacity 0.2s ease;
-    }
-
-    .cursor-trail-star.red {
-      background: #B22234;
-      box-shadow: 0 0 10px 2px rgba(178, 34, 52, 0.85);
-    }
-
-    .cursor-trail-star.blue {
-      background: #3C3B6E;
-      box-shadow: 0 0 10px 2px rgba(60, 59, 110, 0.85);
-    }
-
-    .cursor-trail-star.white {
-      background: #ffffff;
-      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.75);
-    }
-
     .cursor-eagle {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 48px;
-      height: 48px;
-      margin-left: -24px;
-      margin-top: -24px;
-      will-change: transform;
-      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.55));
-      transition: opacity 0.2s ease;
-      user-select: none;
-      pointer-events: none;
+      position: fixed; top: 0; left: 0; width: 48px; height: 48px;
+      margin: -24px 0 0 -24px; filter: drop-shadow(0 3px 6px rgba(0,0,0,.4));
     }
-
-    .cursor-eagle img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: contain;
-      pointer-events: none;
-      user-select: none;
-    }
-
+    .cursor-eagle img { width: 100%; height: 100%; }
     body.custom-cursor-hidden .cursor-layer { opacity: 0; }
+
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-mascot { max-width: 260px; margin: 0 auto; }
+      .speech:after { left: 40px; top: -18px; transform: skewY(-20deg); }
+      .comic-row { grid-template-columns: 1fr 1fr; }
+      .wall { grid-template-columns: 1fr 1fr; }
+      .notes { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .strip img { height: 110px; }
+    }
+    @media (max-width: 520px) {
+      .wall { grid-template-columns: 1fr; }
+      .comic-row { grid-template-columns: 1fr; }
+      .sticker, .sticker:nth-child(n) { transform: none; }
+    }
   </style>
 </head>
-<body class="min-h-screen font-sans text-white antialiased">
-
+<body>
   <div class="cursor-layer" id="cursor-layer" aria-hidden="true">
-    <div class="cursor-trail-star red" id="cursor-star-red"></div>
-    <div class="cursor-trail-star blue" id="cursor-star-blue"></div>
-    <div class="cursor-trail-star white" id="cursor-star-white"></div>
     <div class="cursor-eagle" id="cursor-eagle">
       <img src="cursor.png" alt="" width="48" height="48" draggable="false" />
     </div>
   </div>
 
-  <div class="site-bg" aria-hidden="true"></div>
-  <div class="site-bg-overlay" aria-hidden="true"></div>
-  <div class="stars-field" aria-hidden="true" id="stars-field"></div>
-
-  <div class="content-layer">
-
-    <nav class="sticky top-0 z-50 glass-card border-b border-patriot-gold/20">
-      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="#" class="flex items-center gap-3 group">
-          <img src="logo.jpg" alt="Dunaldu Tremp Logo" class="h-12 w-12 rounded-full ring-2 ring-patriot-gold/60 group-hover:ring-patriot-gold transition-all animate-float" />
-          <div>
-            <span class="font-display text-2xl tracking-wider gold-text">Dunaldu Tremp</span>
-            <span class="block text-xs text-patriot-gold/80 font-semibold tracking-widest">DUNALDU</span>
-          </div>
-        </a>
-        <div class="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wide">
-          <a href="#memes" class="hover:text-patriot-gold transition-colors">Memes</a>
-          <a href="#about" class="hover:text-patriot-gold transition-colors">About</a>
-          <a href="#how-to-buy" class="hover:text-patriot-gold transition-colors">How to Buy</a>
-          <a href="#chart" class="hover:text-patriot-gold transition-colors">Chart</a>
-        </div>
-        <div class="flex items-center gap-3">
-          <a href="#memes" class="md:hidden text-patriot-gold text-xs font-bold uppercase tracking-widest">Memes</a>
-          <a href="https://t.me/DunalduTremp" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform" aria-label="Telegram">
-            <img src="tg.png" alt="Telegram" class="h-9 w-9 rounded-full" />
-          </a>
-          <a href="https://x.com/DunalduTremp" target="_blank" rel="noopener noreferrer" class="social-x rounded-lg p-1.5 hover:scale-110 transition-transform" aria-label="X / Twitter">
-            <img src="x.png" alt="X" class="h-6 w-6" />
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track" id="ticker-track">
-        <div class="ticker-item px-6">
-          ★ BREAKING: 50% TARIFFS ON CANADA ★ CHINA STILL IN THE TRADE WAR ★ STOLE THE STRAIT OF HORMUZ ★ TARIFF KING · HORMUZ BOSS ★ DUNALDU TO THE MOON ★ HOCKEY STICKS AIN'T FREE ★ OPEN THE STRAIT OR ELSE ★
-        </div>
-        <div class="ticker-item px-6">
-          ★ BREAKING: 50% TARIFFS ON CANADA ★ CHINA STILL IN THE TRADE WAR ★ STOLE THE STRAIT OF HORMUZ ★ TARIFF KING · HORMUZ BOSS ★ DUNALDU TO THE MOON ★ HOCKEY STICKS AIN'T FREE ★ OPEN THE STRAIT OR ELSE ★
-        </div>
-      </div>
+  <nav>
+    <a class="brand" href="#">
+      <img src="logo.jpg" alt="Dunaldu Tremp" />
+      <span>
+        <span class="brand-name">DUNALDU</span>
+        <span class="brand-sub">unofficial meme dump</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="#wall">memes</a>
+      <a href="#buy">coin?</a>
+      <a href="https://dexscreener.com/solana/BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump" target="_blank" rel="noopener noreferrer">chart</a>
     </div>
+    <div class="nav-social">
+      <a href="https://t.me/DunalduTremp" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><img src="tg.png" alt="" /></a>
+      <a href="https://x.com/DunalduTremp" target="_blank" rel="noopener noreferrer" aria-label="X"><img src="x.png" alt="" /></a>
+    </div>
+  </nav>
 
-    <header class="relative overflow-hidden">
-      <div class="max-w-6xl mx-auto px-4 pt-8 pb-16">
-        <div class="text-center mb-6">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-sm font-semibold text-patriot-gold mb-4">
-            <span class="star-decoration">★</span>
-            <span>TARIFF KING · HORMUZ BOSS · SOLANA</span>
-            <span class="star-decoration">★</span>
-          </div>
-
-          <div class="glass-card rounded-2xl px-6 py-5 max-w-3xl mx-auto mb-6 border-patriot-gold/40">
-            <p class="font-display text-2xl md:text-4xl tracking-wide leading-tight">
-              <span class="text-white">50% ON </span>
-              <span class="text-patriot-red">CANADA</span>
-              <span class="text-white"> · TARIFFS ON </span>
-              <span class="gold-text">CHINA</span>
-              <span class="text-white"> · STOLE </span>
-              <span class="text-patriot-red">HORMUZ</span>
-            </p>
-            <p class="text-gray-300 text-sm md:text-base mt-3 font-semibold tracking-wide uppercase">
-              The biggest MAGA memes on Solana — and DUNALDU is on the front line.
-            </p>
-          </div>
-        </div>
-
-        <div class="relative mx-auto max-w-5xl mb-10">
-          <div class="absolute inset-0 bg-patriot-gold/20 blur-3xl rounded-full scale-75 animate-pulse-gold"></div>
-          <img src="banner-hormuz.jpg" alt="Dunaldu Tremp tariffs the world and takes Hormuz" class="relative w-full rounded-2xl shadow-2xl ring-2 ring-patriot-gold/40 hover:ring-patriot-gold/70 transition-all" />
-        </div>
-
-        <div class="text-center max-w-3xl mx-auto">
-          <h1 class="font-display text-5xl md:text-7xl tracking-wider mb-2">
-            <span class="gold-text">TARIFF KING</span>
-            <span class="text-white"> · </span>
-            <span class="text-patriot-red">HORMUZ BOSS</span>
-          </h1>
-          <p class="text-2xl md:text-3xl font-display tracking-widest text-patriot-gold mb-6">DUNALDU · Final Boss</p>
-          <p class="text-lg md:text-xl text-gray-200 leading-relaxed mb-6 px-4">
-            Trump slapped <span class="text-patriot-gold font-semibold">50% tariffs on Canada</span>,
-            kept the <span class="text-white font-semibold">China trade war</span> rolling,
-            and went to war with Iran over the Strait of Hormuz —
-            so Dunaldu <span class="text-patriot-red font-semibold">stole Hormuz</span>.
-          </p>
-          <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-8 px-4">
-            Hockey sticks. Maple syrup. Shipping containers. Oil tankers.
-            The memes are the news now — and DUNALDU is the coin of the movement.
-          </p>
-
-          <div class="grid grid-cols-3 gap-3 max-w-lg mx-auto mb-8 px-4">
-            <div class="glass-card rounded-xl py-4 px-2">
-              <p class="font-display text-2xl md:text-3xl gold-text">50%</p>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">On Canada</p>
-            </div>
-            <div class="glass-card rounded-xl py-4 px-2">
-              <p class="font-display text-2xl md:text-3xl text-patriot-red">CHINA</p>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Trade War</p>
-            </div>
-            <div class="glass-card rounded-xl py-4 px-2">
-              <p class="font-display text-2xl md:text-3xl text-white">HORMUZ</p>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">We Took It</p>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-xl p-4 max-w-xl mx-auto mb-8">
-            <p class="text-xs uppercase tracking-widest text-gray-400 mb-2 font-semibold">Contract Address</p>
-            <div class="flex items-center gap-3 justify-center flex-wrap">
-              <code id="ca" class="text-sm md:text-base text-patriot-gold font-mono break-all">BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump</code>
-              <button
-                onclick="copyCA()"
-                class="flex items-center gap-2 px-4 py-2 rounded-lg btn-gold text-patriot-navy font-bold text-sm uppercase tracking-wide"
-                aria-label="Copy contract address"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-                Copy CA
-              </button>
-            </div>
-            <p id="copy-toast" class="copy-toast text-sm text-green-400 mt-2 font-semibold">✓ Copied to clipboard!</p>
-          </div>
-
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-gold px-10 py-4 rounded-xl font-display text-2xl tracking-wider text-patriot-navy animate-pulse-gold w-full sm:w-auto text-center"
-            >
-              ★ BUY NOW ★
-            </a>
-            <a
-              href="#memes"
-              class="btn-patriot px-10 py-4 rounded-xl font-display text-2xl tracking-wider text-white border border-patriot-gold/30 w-full sm:w-auto text-center"
-            >
-              🔥 MEMES
-            </a>
-            <a
-              href="https://dexscreener.com/solana/BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-blue px-10 py-4 rounded-xl font-display text-2xl tracking-wider text-white border border-patriot-gold/30 w-full sm:w-auto text-center"
-            >
-              📈 CHART
-            </a>
-          </div>
-        </div>
+  <header class="wrap">
+    <div class="hero">
+      <div class="hero-mascot">
+        <img class="logo" src="logo.jpg" alt="Dunaldu Tremp cartoon — red AMERICA IS BACK hat, navy suit, googly eyes" />
+        <div class="stamp">NOT OFFICIAL</div>
       </div>
-      <div class="stripes-accent w-full"></div>
-    </header>
-
-    <section id="memes" class="py-20 px-4">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-10">
-          <h2 class="font-display text-5xl md:text-6xl tracking-wider mb-3">
-            <span class="star-decoration">★</span>
-            <span class="gold-text"> MEME WAR ROOM </span>
-            <span class="star-decoration">★</span>
-          </h2>
-          <p class="text-gray-300 text-lg max-w-2xl mx-auto">
-            17 original Dunaldu memes. Tariffs. China. Hormuz. Click to zoom. Download and spread.
-          </p>
-          <div class="w-32 h-1 bg-gradient-to-r from-patriot-red via-patriot-gold to-patriot-blue mx-auto rounded-full mt-4"></div>
-        </div>
-
-        <div class="flex flex-wrap items-center justify-center gap-2 mb-10" id="meme-filters" role="tablist" aria-label="Filter memes">
-          <button class="filter-btn active" data-filter="all" type="button">ALL</button>
-          <button class="filter-btn" data-filter="canada" type="button">CANADA 50%</button>
-          <button class="filter-btn" data-filter="china" type="button">CHINA</button>
-          <button class="filter-btn" data-filter="hormuz" type="button">HORMUZ</button>
-          <button class="filter-btn" data-filter="tariff" type="button">TARIFFS</button>
-        </div>
-
-        <div id="meme-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
-      </div>
-    </section>
-
-    <section id="about" class="py-20 px-4">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-14">
-          <h2 class="font-display text-5xl md:text-6xl tracking-wider mb-3">
-            <span class="star-decoration">★</span>
-            <span class="gold-text"> THE LORE </span>
-            <span class="star-decoration">★</span>
-          </h2>
-          <p class="text-gray-300 text-lg max-w-2xl mx-auto mt-4">
-            Three fronts. One frog. Zero chill. DUNALDU is the meme coin built for this exact moment.
-          </p>
-          <div class="w-32 h-1 bg-gradient-to-r from-patriot-red via-patriot-gold to-patriot-blue mx-auto rounded-full mt-4"></div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="glass-card rounded-2xl p-8 text-center hover:border-patriot-gold/50 transition-all hover:-translate-y-1">
-            <img src="memes/meme-hockey.jpg" alt="Canada tariff meme" class="w-24 h-24 rounded-xl object-cover mx-auto mb-4 ring-2 ring-patriot-gold/40" />
-            <h3 class="font-display text-2xl text-patriot-gold tracking-wide mb-3">50% ON CANADA</h3>
-            <p class="text-gray-300 leading-relaxed">Hockey sticks. Maple syrup. Wine. Honey. Cement. Canada wanted a deal — Dunaldu wanted 50%. Nice antlers. Still taxed.</p>
-          </div>
-          <div class="glass-card rounded-2xl p-8 text-center hover:border-patriot-gold/50 transition-all hover:-translate-y-1">
-            <img src="memes/meme-panda-deal.jpg" alt="China tariff meme" class="w-24 h-24 rounded-xl object-cover mx-auto mb-4 ring-2 ring-patriot-gold/40" />
-            <h3 class="font-display text-2xl text-patriot-gold tracking-wide mb-3">CHINA TRADE WAR</h3>
-            <p class="text-gray-300 leading-relaxed">Only two countries kept swinging instead of folding: China and Canada. No deal? Cool. Tariffs. Shipping containers as far as the eye can see.</p>
-          </div>
-          <div class="glass-card rounded-2xl p-8 text-center hover:border-patriot-gold/50 transition-all hover:-translate-y-1">
-            <img src="memes/meme-steal-hormuz.jpg" alt="Stole Hormuz meme" class="w-24 h-24 rounded-xl object-cover mx-auto mb-4 ring-2 ring-patriot-gold/40" />
-            <h3 class="font-display text-2xl text-patriot-gold tracking-wide mb-3">STOLE HORMUZ</h3>
-            <p class="text-gray-300 leading-relaxed">Iran tried to close the Strait of Hormuz. Dunaldu went to war, opened the waterway, and took the trophy. Toll booth optional. Or else.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="how-to-buy" class="py-20 px-4 relative">
-      <div class="absolute inset-0 bg-patriot-navy/60"></div>
-      <div class="relative max-w-6xl mx-auto">
-        <div class="text-center mb-14">
-          <h2 class="font-display text-5xl md:text-6xl tracking-wider mb-3">
-            HOW TO BUY <span class="gold-text">DUNALDU</span>
-          </h2>
-          <p class="text-gray-300 text-lg">Tariffs are live. Hormuz is taken. Grab DUNALDU before the next headline. 4 easy steps using SOL.</p>
-          <div class="w-32 h-1 bg-gradient-to-r from-patriot-red via-patriot-gold to-patriot-blue mx-auto rounded-full mt-4"></div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
-          <div class="glass-card rounded-2xl p-6 md:p-8 flex gap-5 items-start hover:border-patriot-gold/50 transition-all">
-            <div class="flex-shrink-0">
-              <span class="font-display text-6xl step-number">01</span>
-            </div>
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <img src="phantom.png" alt="Phantom Wallet" class="h-10 w-10 rounded-lg object-contain bg-white/10 p-1" onerror="this.style.display='none'" />
-                <h3 class="font-display text-2xl tracking-wide text-patriot-gold">GET PHANTOM WALLET</h3>
-              </div>
-              <p class="text-gray-300 leading-relaxed">
-                Download and install the <strong class="text-white">Phantom wallet</strong> browser extension or mobile app. Create a new wallet and securely store your seed phrase. Phantom is the go-to Solana wallet for meme coin traders.
-              </p>
-              <a href="https://phantom.app/" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-patriot-gold text-sm font-semibold hover:underline">→ Get Phantom Wallet</a>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6 md:p-8 flex gap-5 items-start hover:border-patriot-gold/50 transition-all">
-            <div class="flex-shrink-0">
-              <span class="font-display text-6xl step-number">02</span>
-            </div>
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <img src="sol.png" alt="Solana SOL" class="h-10 w-10 rounded-lg object-contain" onerror="this.style.display='none'" />
-                <h3 class="font-display text-2xl tracking-wide text-patriot-gold">BUY SOL</h3>
-              </div>
-              <p class="text-gray-300 leading-relaxed">
-                Fund your Phantom wallet with <strong class="text-white">SOL (Solana)</strong>. You can buy SOL directly inside Phantom using a credit/debit card, or transfer SOL from an exchange like Coinbase or Binance to your wallet address.
-              </p>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6 md:p-8 flex gap-5 items-start hover:border-patriot-gold/50 transition-all">
-            <div class="flex-shrink-0">
-              <span class="font-display text-6xl step-number">03</span>
-            </div>
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <img src="pumpswap.png" alt="PumpSwap" class="h-10 w-10 rounded-lg object-contain bg-white/10 p-1" onerror="this.style.display='none'" />
-                <h3 class="font-display text-2xl tracking-wide text-patriot-gold">GO TO SWAP</h3>
-              </div>
-              <p class="text-gray-300 leading-relaxed">
-                Connect your Phantom wallet to the swap platform. Click the <strong class="text-white">Buy Now</strong> button above or visit the DEX directly. Make sure you're on the correct network and have enough SOL for gas fees.
-              </p>
-              <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-patriot-gold text-sm font-semibold hover:underline">→ Open Swap</a>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6 md:p-8 flex gap-5 items-start hover:border-patriot-gold/50 transition-all">
-            <div class="flex-shrink-0">
-              <span class="font-display text-6xl step-number">04</span>
-            </div>
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <img src="logo.jpg" alt="Dunaldu Tremp" class="h-10 w-10 rounded-full ring-1 ring-patriot-gold/50" />
-                <h3 class="font-display text-2xl tracking-wide text-patriot-gold">SWAP SOL → DUNALDU</h3>
-              </div>
-              <p class="text-gray-300 leading-relaxed">
-                Paste the <strong class="text-white">DUNALDU contract address</strong> (use Copy CA above), select SOL as input, set your amount, and confirm the swap in Phantom. Tariff king energy. Hormuz bags. 🇺🇸
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-12">
-          <a
-            href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-gold inline-block px-12 py-4 rounded-xl font-display text-2xl tracking-wider text-patriot-navy"
-          >
-            ★ BUY DUNALDU NOW ★
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="chart" class="py-20 px-4">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-10">
-          <h2 class="font-display text-5xl md:text-6xl tracking-wider mb-3">
-            LIVE <span class="gold-text">CHART</span>
-          </h2>
-          <p class="text-gray-300">Track DUNALDU while the tariff war and Hormuz headlines print</p>
-          <div class="w-32 h-1 bg-gradient-to-r from-patriot-red via-patriot-gold to-patriot-blue mx-auto rounded-full mt-4"></div>
-        </div>
-
-        <div class="glass-card rounded-2xl overflow-hidden p-2 md:p-4">
-          <style>#dexscreener-embed{position:relative;width:100%;padding-bottom:125%;}@media(min-width:1400px){#dexscreener-embed{padding-bottom:65%;}}#dexscreener-embed iframe{position:absolute;width:100%;height:100%;top:0;left:0;border:0;}</style><div id="dexscreener-embed"><iframe src="https://dexscreener.com/solana/8xVsj9aBzCEbwLTJjrqSVzKGQrsFnL3x7eMPMoL6wvC8?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"></iframe></div>
-        </div>
-
-        <div class="text-center mt-6">
-          <a
-            href="https://dexscreener.com/solana/BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-blue inline-block px-8 py-3 rounded-xl font-display text-xl tracking-wider text-white border border-patriot-gold/30"
-          >
-            VIEW ON DEXSCREENER →
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <footer class="border-t border-patriot-gold/20 py-10 px-4">
-      <div class="max-w-6xl mx-auto text-center">
-        <div class="flex items-center justify-center gap-3 mb-4">
-          <img src="logo.jpg" alt="Dunaldu Tremp" class="h-14 w-14 rounded-full ring-2 ring-patriot-gold/50" />
-          <div class="text-left">
-            <p class="font-display text-3xl tracking-wider gold-text">Dunaldu Tremp</p>
-            <p class="text-patriot-gold text-sm font-semibold tracking-widest">DUNALDU</p>
-          </div>
-        </div>
-        <p class="text-gray-400 text-sm mb-6 max-w-lg mx-auto">
-          50% on Canada. Tariffs on China. Stole Hormuz. DUNALDU is the Solana meme coin of the movement. Not financial advice. DYOR. 🇺🇸
+      <div class="speech">
+        <p class="marker">this is NOT an official website lmao</p>
+        <h1>DUNALDU'S<br /><span>MEME DUMP</span></h1>
+        <p class="blurb">
+          50% tariffs on Canada. Trade war with China. War with Iran over the Strait of Hormuz —
+          so the frog stole it. Stickers, not press releases.
         </p>
-        <div class="flex items-center justify-center gap-4 mb-6">
-          <a href="https://t.me/DunalduTremp" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform">
-            <img src="tg.png" alt="Telegram" class="h-10 w-10 rounded-full" />
-          </a>
-          <a href="https://x.com/DunalduTremp" target="_blank" rel="noopener noreferrer" class="social-x rounded-lg p-2 hover:scale-110 transition-transform">
-            <img src="x.png" alt="X" class="h-7 w-7" />
-          </a>
+        <div class="hero-actions">
+          <a class="btn btn-hat" href="#wall">see the memes</a>
+          <a class="btn btn-blonde" href="#buy">copy the CA</a>
+          <a class="btn btn-suit" href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump" target="_blank" rel="noopener noreferrer">buy dunaldu</a>
         </div>
-        <div class="stripes-accent w-48 mx-auto mb-4 rounded-full"></div>
-        <p class="text-gray-500 text-xs">© 2026 Dunaldu Tremp · Tariff King · Hormuz Boss. ★</p>
-      </div>
-    </footer>
-
-  </div>
-
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Meme viewer">
-    <button type="button" class="lightbox-nav prev" id="lb-prev" aria-label="Previous meme">‹</button>
-    <div class="flex flex-col items-center gap-4 max-w-full">
-      <img id="lb-img" src="memes/meme-steal-hormuz.jpg" alt="Dunaldu meme" />
-      <div class="flex items-center gap-3">
-        <p id="lb-title" class="font-display text-2xl tracking-wide gold-text"></p>
-        <a id="lb-download" href="#" download class="btn-gold px-4 py-2 rounded-lg text-patriot-navy font-bold text-sm uppercase tracking-wide">Download</a>
-        <button type="button" id="lb-close" class="btn-blue px-4 py-2 rounded-lg text-white text-sm font-bold uppercase tracking-wide border border-patriot-gold/30">Close</button>
       </div>
     </div>
-    <button type="button" class="lightbox-nav next" id="lb-next" aria-label="Next meme">›</button>
+
+    <div class="strip ink" aria-hidden="true">
+      <img src="banner.jpg" alt="" />
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="section-head">
+      <h2>the <em>comic</em></h2>
+      <p class="scribble">4-panel dump · click any of em</p>
+    </div>
+    <div class="comic-row" id="comic-row"></div>
+
+    <div class="section-head" id="wall-head">
+      <h2>sticker <em>wall</em></h2>
+      <p class="scribble">17 original dunaldu memes. save + spam.</p>
+    </div>
+    <div class="filters" id="filters" role="tablist" aria-label="Filter memes">
+      <button class="chip active" data-filter="all" type="button">ALL</button>
+      <button class="chip" data-filter="canada" type="button">CANADA 50%</button>
+      <button class="chip" data-filter="china" type="button">CHINA</button>
+      <button class="chip" data-filter="hormuz" type="button">HORMUZ</button>
+      <button class="chip" data-filter="tariff" type="button">TARIFFS</button>
+    </div>
+    <div class="wall" id="wall"></div>
+
+    <div class="notes" id="buy">
+      <div class="note">
+        <h3>sticky note from dunaldu</h3>
+        <p>not financial advice. not a government site. just a cartoon frog with a hat. if you want the coin anyway:</p>
+        <div class="ca" id="ca">BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump</div>
+        <button class="btn btn-hat" type="button" onclick="copyCA()">copy CA</button>
+        <span class="copied" id="copied">COPIED!!</span>
+        <p style="margin:12px 0 0; font-size:0.95rem;">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump" target="_blank" rel="noopener noreferrer">pump swap →</a>
+          &nbsp;·&nbsp;
+          <a href="https://dexscreener.com/solana/BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump" target="_blank" rel="noopener noreferrer">dexscreener →</a>
+        </p>
+      </div>
+      <div class="scrap">
+        <h3>how 2 buy (scribble)</h3>
+        <ol class="steps">
+          <li>get phantom</li>
+          <li>put SOL in it</li>
+          <li>hit buy dunaldu</li>
+          <li>paste the CA. that's it.</li>
+        </ol>
+        <p class="scribble" style="margin-top:10px;">tariff king. hormuz boss. unofficial.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <img class="logo-mini" src="logo.jpg" alt="" />
+    <p class="fineprint">UNOFFICIAL FAN MEME SITE · NOT AFFILIATED WITH ANYTHING REAL</p>
+    <p>© 2026 dunaldu tremp memes · canada 50% · china tariffs · stole hormuz</p>
+  </footer>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Meme">
+    <button class="lb-nav prev" id="lb-prev" type="button" aria-label="Previous">‹</button>
+    <div class="lb-frame">
+      <img id="lb-img" src="memes/meme-steal-hormuz.jpg" alt="" />
+      <div class="lb-bar">
+        <span id="lb-title">Stole Hormuz</span>
+        <span>
+          <a id="lb-dl" href="#" download>save</a>
+          &nbsp;·&nbsp;
+          <button type="button" id="lb-close" style="font-family:Bangers,cursive;font-size:1.1rem;border:3px solid #1A1A1A;background:#fff;cursor:pointer;">close</button>
+        </span>
+      </div>
+    </div>
+    <button class="lb-nav next" id="lb-next" type="button" aria-label="Next">›</button>
   </div>
 
   <script>
-    const CONTRACT_ADDRESS = 'BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump';
+    const CA = 'BtGSevmBAFr4Sfw1yCPnkCG2xjV6UFL5KAypaWiopump';
 
     const MEMES = [
       { src: 'memes/meme-steal-hormuz.jpg', title: 'Stole Hormuz', tags: ['hormuz'] },
@@ -823,202 +646,144 @@
       { src: 'memes/meme-press.jpg', title: 'So I Tariffed Canada', tags: ['canada', 'tariff'] },
       { src: 'memes/meme-binoculars.jpg', title: 'Mines In Hormuz', tags: ['hormuz'] },
       { src: 'memes/meme-two-front.jpg', title: 'Tariffs At 9', tags: ['tariff', 'hormuz'] },
-      { src: 'memes/meme-maple.jpg', title: 'Syrup Ain\'t Free', tags: ['canada', 'tariff'] },
-      { src: 'memes/meme-oil.jpg', title: 'Oil\'s Up', tags: ['hormuz'] },
+      { src: 'memes/meme-maple.jpg', title: "Syrup Ain't Free", tags: ['canada', 'tariff'] },
+      { src: 'memes/meme-oil.jpg', title: "Oil's Up", tags: ['hormuz'] },
       { src: 'memes/meme-grocery.jpg', title: 'Canadian Imports', tags: ['canada', 'tariff'] },
       { src: 'memes/meme-eagle-map.jpg', title: 'The Eagle And Me', tags: ['hormuz'] },
     ];
 
-    let activeFilter = 'all';
-    let visibleMemes = MEMES.slice();
-    let lbIndex = 0;
+    const FEATURED = MEMES.slice(0, 4);
 
-    function fileName(src) {
-      return src.split('/').pop();
+    let filter = 'all';
+    let visible = MEMES.slice();
+    let idx = 0;
+
+    function fileName(src) { return src.split('/').pop(); }
+
+    function renderComic() {
+      document.getElementById('comic-row').innerHTML = FEATURED.map((m, i) => `
+        <figure class="comic-cell" data-src="${m.src}" data-title="${m.title}" tabindex="0" role="button">
+          <img src="${m.src}" alt="${m.title}" />
+          <figcaption>${i + 1}. ${m.title}</figcaption>
+        </figure>
+      `).join('');
     }
 
-    function renderMemes() {
-      visibleMemes = activeFilter === 'all'
-        ? MEMES.slice()
-        : MEMES.filter((m) => m.tags.includes(activeFilter));
-
-      const grid = document.getElementById('meme-grid');
-      grid.innerHTML = visibleMemes.map((m, i) => `
-        <article class="meme-card" data-index="${i}" tabindex="0" role="button" aria-label="${m.title}">
+    function renderWall() {
+      visible = filter === 'all' ? MEMES.slice() : MEMES.filter((m) => m.tags.includes(filter));
+      document.getElementById('wall').innerHTML = visible.map((m, i) => `
+        <article class="sticker" data-index="${i}" tabindex="0" role="button" aria-label="${m.title}">
+          <span class="tape" aria-hidden="true"></span>
           <img src="${m.src}" alt="${m.title}" loading="lazy" />
-          <div class="meme-overlay">
-            <span class="font-display text-lg tracking-wide text-white">${m.title}</span>
-            <a href="${m.src}" download="${fileName(m.src)}" class="text-xs font-bold uppercase tracking-wider text-patriot-navy bg-patriot-gold px-2 py-1 rounded" onclick="event.stopPropagation()">Save</a>
-          </div>
+          <a class="save" href="${m.src}" download="${fileName(m.src)}" onclick="event.stopPropagation()">save</a>
         </article>
       `).join('');
     }
 
-    function openLightbox(i) {
-      lbIndex = i;
-      const m = visibleMemes[lbIndex];
+    function openLbFromMeme(m, i) {
+      idx = i;
       document.getElementById('lb-img').src = m.src;
       document.getElementById('lb-img').alt = m.title;
       document.getElementById('lb-title').textContent = m.title;
-      const dl = document.getElementById('lb-download');
+      const dl = document.getElementById('lb-dl');
       dl.href = m.src;
       dl.download = fileName(m.src);
-      document.getElementById('lightbox').classList.add('open');
+      document.getElementById('lb').classList.add('open');
     }
 
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('open');
+    function openLb(i) { openLbFromMeme(visible[i], i); }
+    function closeLb() { document.getElementById('lb').classList.remove('open'); }
+    function stepLb(d) {
+      if (!visible.length) return;
+      idx = (idx + d + visible.length) % visible.length;
+      openLb(idx);
     }
 
-    function stepLightbox(dir) {
-      if (!visibleMemes.length) return;
-      lbIndex = (lbIndex + dir + visibleMemes.length) % visibleMemes.length;
-      openLightbox(lbIndex);
-    }
+    renderComic();
+    renderWall();
 
-    document.getElementById('meme-filters').addEventListener('click', (e) => {
+    document.getElementById('filters').addEventListener('click', (e) => {
       const btn = e.target.closest('[data-filter]');
       if (!btn) return;
-      activeFilter = btn.dataset.filter;
-      document.querySelectorAll('.filter-btn').forEach((b) => b.classList.toggle('active', b === btn));
-      renderMemes();
+      filter = btn.dataset.filter;
+      document.querySelectorAll('.chip').forEach((c) => c.classList.toggle('active', c === btn));
+      renderWall();
     });
 
-    document.getElementById('meme-grid').addEventListener('click', (e) => {
-      const card = e.target.closest('.meme-card');
+    document.getElementById('wall').addEventListener('click', (e) => {
+      const card = e.target.closest('.sticker');
       if (!card) return;
-      openLightbox(Number(card.dataset.index));
+      openLb(Number(card.dataset.index));
     });
-
-    document.getElementById('meme-grid').addEventListener('keydown', (e) => {
+    document.getElementById('wall').addEventListener('keydown', (e) => {
       if (e.key !== 'Enter' && e.key !== ' ') return;
-      const card = e.target.closest('.meme-card');
+      const card = e.target.closest('.sticker');
       if (!card) return;
       e.preventDefault();
-      openLightbox(Number(card.dataset.index));
+      openLb(Number(card.dataset.index));
     });
 
-    document.getElementById('lb-close').addEventListener('click', closeLightbox);
-    document.getElementById('lb-prev').addEventListener('click', () => stepLightbox(-1));
-    document.getElementById('lb-next').addEventListener('click', () => stepLightbox(1));
-    document.getElementById('lightbox').addEventListener('click', (e) => {
-      if (e.target.id === 'lightbox') closeLightbox();
+    document.getElementById('comic-row').addEventListener('click', (e) => {
+      const cell = e.target.closest('.comic-cell');
+      if (!cell) return;
+      visible = MEMES.slice();
+      const i = visible.findIndex((m) => m.src === cell.dataset.src);
+      openLb(i >= 0 ? i : 0);
     });
+    document.getElementById('comic-row').addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const cell = e.target.closest('.comic-cell');
+      if (!cell) return;
+      e.preventDefault();
+      visible = MEMES.slice();
+      const i = visible.findIndex((m) => m.src === cell.dataset.src);
+      openLb(i >= 0 ? i : 0);
+    });
+
+    document.getElementById('lb-close').addEventListener('click', closeLb);
+    document.getElementById('lb-prev').addEventListener('click', () => stepLb(-1));
+    document.getElementById('lb-next').addEventListener('click', () => stepLb(1));
+    document.getElementById('lb').addEventListener('click', (e) => { if (e.target.id === 'lb') closeLb(); });
     document.addEventListener('keydown', (e) => {
-      if (!document.getElementById('lightbox').classList.contains('open')) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') stepLightbox(-1);
-      if (e.key === 'ArrowRight') stepLightbox(1);
+      if (!document.getElementById('lb').classList.contains('open')) return;
+      if (e.key === 'Escape') closeLb();
+      if (e.key === 'ArrowLeft') stepLb(-1);
+      if (e.key === 'ArrowRight') stepLb(1);
     });
-
-    renderMemes();
-
-    (function initCustomCursor() {
-      if (!window.matchMedia('(pointer: fine)').matches) return;
-
-      document.body.classList.add('custom-cursor-active');
-
-      const eagle = document.getElementById('cursor-eagle');
-      const stars = [
-        { el: document.getElementById('cursor-star-red'), x: 0, y: 0, lag: 0.14 },
-        { el: document.getElementById('cursor-star-blue'), x: 0, y: 0, lag: 0.1 },
-        { el: document.getElementById('cursor-star-white'), x: 0, y: 0, lag: 0.07 },
-      ];
-
-      let mouseX = window.innerWidth / 2;
-      let mouseY = window.innerHeight / 2;
-      let eagleX = mouseX;
-      let eagleY = mouseY;
-      let visible = false;
-
-      stars.forEach((s) => { s.x = mouseX; s.y = mouseY; });
-
-      document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        if (!visible) {
-          visible = true;
-          document.body.classList.remove('custom-cursor-hidden');
-        }
-      });
-
-      document.addEventListener('mouseleave', () => {
-        visible = false;
-        document.body.classList.add('custom-cursor-hidden');
-      });
-
-      document.addEventListener('mouseenter', () => {
-        visible = true;
-        document.body.classList.remove('custom-cursor-hidden');
-      });
-
-      function setPos(el, x, y) {
-        el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-      }
-
-      function animate() {
-        eagleX += (mouseX - eagleX) * 0.28;
-        eagleY += (mouseY - eagleY) * 0.28;
-        setPos(eagle, eagleX, eagleY);
-
-        let targetX = eagleX;
-        let targetY = eagleY;
-        stars.forEach((star) => {
-          star.x += (targetX - star.x) * star.lag;
-          star.y += (targetY - star.y) * star.lag;
-          setPos(star.el, star.x, star.y);
-          targetX = star.x;
-          targetY = star.y;
-        });
-
-        requestAnimationFrame(animate);
-      }
-
-      document.body.classList.add('custom-cursor-hidden');
-      animate();
-    })();
-
-    (function initStars() {
-      const field = document.getElementById('stars-field');
-      const whiteCount = 18;
-      const redCount = 14;
-
-      function createStar(type, i, total) {
-        const star = document.createElement('span');
-        const size = type === 'white'
-          ? 6 + Math.random() * 10
-          : 8 + Math.random() * 12;
-        star.className = `shine-star shine-star-${type}`;
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.animationDelay = `${(i / total) * 4 + Math.random() * 2}s`;
-        star.style.animationDuration = `${2.5 + Math.random() * 2.5}s`;
-        field.appendChild(star);
-      }
-
-      for (let i = 0; i < whiteCount; i++) createStar('white', i, whiteCount);
-      for (let i = 0; i < redCount; i++) createStar('red', i, redCount);
-    })();
 
     function copyCA() {
-      navigator.clipboard.writeText(CONTRACT_ADDRESS).then(() => {
-        const toast = document.getElementById('copy-toast');
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2500);
-      }).catch(() => {
-        const el = document.createElement('textarea');
-        el.value = CONTRACT_ADDRESS;
-        document.body.appendChild(el);
-        el.select();
+      const done = () => {
+        const el = document.getElementById('copied');
+        el.classList.add('show');
+        setTimeout(() => el.classList.remove('show'), 1800);
+      };
+      navigator.clipboard.writeText(CA).then(done).catch(() => {
+        const t = document.createElement('textarea');
+        t.value = CA;
+        document.body.appendChild(t);
+        t.select();
         document.execCommand('copy');
-        document.body.removeChild(el);
-        const toast = document.getElementById('copy-toast');
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2500);
+        document.body.removeChild(t);
+        done();
       });
     }
+
+    (function cursor() {
+      if (!window.matchMedia('(pointer: fine)').matches) return;
+      document.body.classList.add('custom-cursor-active', 'custom-cursor-hidden');
+      const eagle = document.getElementById('cursor-eagle');
+      let mx = innerWidth / 2, my = innerHeight / 2, x = mx, y = my;
+      document.addEventListener('mousemove', (e) => {
+        mx = e.clientX; my = e.clientY;
+        document.body.classList.remove('custom-cursor-hidden');
+      });
+      document.addEventListener('mouseleave', () => document.body.classList.add('custom-cursor-hidden'));
+      (function loop() {
+        x += (mx - x) * 0.28; y += (my - y) * 0.28;
+        eagle.style.transform = `translate3d(${x}px,${y}px,0)`;
+        requestAnimationFrame(loop);
+      })();
+    })();
   </script>
 </body>
 </html>
